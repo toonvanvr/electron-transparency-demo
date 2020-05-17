@@ -40,6 +40,7 @@ function dropfile(event: DragEvent) {
   target.classList.remove('success')
   target.classList.add('failed')
   target.innerHTML = 'FILES!!!'
+  event.preventDefault()
 }
 
 function makefile (event: DragEvent) {

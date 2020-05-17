@@ -34,6 +34,7 @@ function dropfile(event) {
     target.classList.remove('success');
     target.classList.add('failed');
     target.innerHTML = 'FILES!!!';
+    event.preventDefault();
 }
 function makefile(event) {
     const data = event.dataTransfer;
