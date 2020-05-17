@@ -16,3 +16,6 @@ npm start
   - can't drop files into the app
     (probably can port the fix from electron-transparency-mouse-fix v1)
   - cursor doesn't always show up correctly when coming in from the border
+- All platforms:
+  - opening the devTools (even detached) causes irregular behavior
+    prefer using the vscode debugger (see .vscode/launch.json)

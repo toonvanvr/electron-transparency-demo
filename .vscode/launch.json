@@ -1,0 +1,40 @@
+/*
+
+You'll need some plugins for these tasks to work:
+
+- Debugger for Electron
+    https://marketplace.visualstudio.com/items?itemName=kodetech.electron-debug
+- Debugger for Chrome
+    https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome 
+
+
+TODO: add build taks to run before debugger
+*/
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug main process (src/main.js)",
+      "type": "electron",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "runtimeArgs": [
+        "${workspaceFolder}/index.js",
+      ],
+      "request": "launch",
+      "sourceMaps": true
+    },
+    {
+      "name": "Debug web contents (src/renderer.js)",
+      "type": "chrome",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "runtimeArgs": [
+        "index.js",
+        "--remote-debugging-port=9222"
+      ],
+      "webRoot": "${workspaceRoot}"
+    }
+  ]
+}
