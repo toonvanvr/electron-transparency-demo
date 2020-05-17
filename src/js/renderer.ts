@@ -48,6 +48,6 @@ function makefile (event: DragEvent) {
   if (target.classList.contains('success')) {
     data.setData('DownloadURL', 'text/plain:generated-file.txt:data:text/plain;base64,' + btoa(`You dropped a file called ${target.innerHTML}`));
   } else {
-    event.preventDefault()
+    data.setData('DownloadURL', 'text/plain:generated-file.txt:data:text/plain;base64,' + btoa(`There was no file dropped yet`));
   }
 }
