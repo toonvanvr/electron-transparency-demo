@@ -15,23 +15,23 @@ TODO: add build taks to run before debugger
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug main process (src/main.js)",
+      "name": "Debug main process (static/main.js)",
       "type": "electron",
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
       "runtimeArgs": [
-        "${workspaceFolder}/index.js",
+        "${workspaceFolder}",
       ],
       "request": "launch",
-      "sourceMaps": true
+      // "sourceMaps": true
     },
     {
-      "name": "Debug web contents (src/renderer.js)",
+      "name": "Debug web contents (static/index.html)",
       "type": "chrome",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
       "runtimeArgs": [
-        "index.js",
+        "${workspaceFolder}",
         "--remote-debugging-port=9222"
       ],
       "webRoot": "${workspaceRoot}"
