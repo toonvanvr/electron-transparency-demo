@@ -2,9 +2,9 @@
   "name": "electron-transparency-demo",
   "version": "1.0.0",
   "description": "A demo to showcase transparency with electron",
-  "main": "index.js",
+  "main": "static/main.js",
   "scripts": {
-    "start": "npx electron ."
+    "start": "npx tsc && npx electron ."
   },
   "repository": {
     "type": "git",
