@@ -22,7 +22,7 @@ TODO: add build taks to run before debugger
         "${workspaceFolder}",
       ],
       "request": "launch",
-      // "sourceMaps": true
+      "preLaunchTask": "TypeScript: Build"
     },
     {
       "name": "Debug web contents (static/index.html)",
@@ -34,7 +34,8 @@ TODO: add build taks to run before debugger
         "${workspaceFolder}",
         "--remote-debugging-port=9222"
       ],
-      "webRoot": "${workspaceRoot}"
+      "webRoot": "${workspaceRoot}",
+      "preLaunchTask": "TypeScript: Build"
     }
   ]
 }
