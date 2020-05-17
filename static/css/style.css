@@ -60,3 +60,18 @@ body {
   cursor: grab;
   background-color: turquoise;
 }
+
+.handle {
+  -webkit-app-region: drag;
+  pointer-events: all;
+  border-radius: .4em;
+  padding: .5em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  border: #808080;
+  cursor: move;
+}
