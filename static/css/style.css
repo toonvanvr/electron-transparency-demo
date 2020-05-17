@@ -1,0 +1,61 @@
+.ptr-on  {pointer-events: all}
+.ptr-off {pointer-events: none}
+
+body {
+  display: flex;
+  margin: 0;
+
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: arial;
+
+  border: 5px double red;
+}
+
+.listening body {
+  border-color: greenyellow;
+}
+
+.draggables {
+  width: 100px;
+}
+
+.orb, .anchor {
+  display: flex;
+  margin: 2em 0;
+  width: 100px;
+  height: 100px;
+
+  box-sizing: border-box;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.anchor {
+  border: 2px dashed black;
+  background-color: rgba(255,255,255, .5);
+}
+
+.orb {
+  cursor: grab;
+  background-color: white;
+  overflow: hidden;
+}
+
+.anchor.hovering {
+  background-color: green;
+}
+
+.anchor.failed {
+  background-color: red;
+  text-align: center;
+}
+
+.anchor.success {
+  cursor: grab;
+  background-color: turquoise;
+}

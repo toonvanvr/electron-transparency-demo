@@ -1,0 +1,18 @@
+<html class="ptr-off listening">
+  <head>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/transparency-pointer.js"></script>
+    <script defer src="../js/renderer.js"></script>
+  </head>
+  <body>
+    <div class="draggables">
+      <div id="unique" class="orb ptr-on" draggable="true" ondragstart="dragstart(event)">
+        DRAG ME!
+      </div>
+    </div>
+    <div class="anchors">
+      <div class="anchor ptr-on" ondragover="dragover(event)" ondrop="drop(event)" ondragleave="dragout(event)">HERE!</div>
+      <div class="anchor ptr-on" ondragover="dragover(event)" ondrop="dropfile(event)" ondragleave="dragout(event)" draggable="true" ondragstart="makefile(event)">FILE HERE</div>
+    </div>
+  </body>
+</html>
