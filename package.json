@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/toonvanvr/electron-transparency-demo#readme",
   "devDependencies": {
-    "electron": "^8.3.0",
+    "electron": "^8.5.1",
     "typescript": "^3.9.2"
   }
 }
